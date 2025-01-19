@@ -5,3 +5,4 @@ Roadmap by [Devopscube](https://www.devopscube.com/)
 
 - [x] [OSI Model/TCP-IP Model](infrastructure-component/osi-model.md) 
 - [x] [Networking topologies](infrastructure-component/networking-topologies.md) 
+- [x] [CIDR Notations](infrastructure-component/cidr-notations.md) 
