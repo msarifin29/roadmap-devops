@@ -1,2 +1,6 @@
 ## A Practical Roadmap Become A DevOps Engineer 
-Powered by [Devopscube](https://www.devopscube.com/)
+Roadmap by [Devopscube](https://www.devopscube.com/)
+
+### Learn How Infrastructure Components Work
+
+- [x] [OSI Model/TCP-IP Model](infrastructure-component/osi-model.md) 
