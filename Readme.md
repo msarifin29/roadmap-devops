@@ -1,9 +1,13 @@
 ## A Practical Roadmap Become A DevOps Engineer 
 Roadmap by [Devopscube](https://www.devopscube.com/)
 
+## Learn Linux
+
+- [x] [Install Virtual Box](learn-linux/virtual-box.md) 
+
 ## Learn How Infrastructure Components Work
 
-### [1. Networking]()
+### 1. Networking
 
 - [x] [OSI Model/TCP-IP Model](infrastructure-component/osi-model.md) 
 - [x] [Networking topologies](infrastructure-component/networking-topologies.md) 
