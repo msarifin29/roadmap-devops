@@ -4,6 +4,8 @@ Roadmap by [Devopscube](https://www.devopscube.com/)
 ## Learn Linux
 
 - [x] [Install Virtual Box](learn-linux/virtual-box.md) 
+- [x] [How systemd work](learn-linux/systemd-works.md) 
+- [x] [Protocols](learn-linux/protocols.md) 
 
 ## Learn How Infrastructure Components Work
 
