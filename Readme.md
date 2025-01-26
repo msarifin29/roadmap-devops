@@ -5,6 +5,7 @@ Roadmap by [Devopscube](https://www.devopscube.com/)
 
 - [x] [Install Virtual Box](learn-linux/virtual-box.md) 
 - [x] [Vagrant](learn-linux/vagrant.md) 
+- [x] [Configure web servers](learn-linux/nginx.md) 
 - [x] [How systemd work](learn-linux/systemd-works.md) 
 - [x] [Protocols](learn-linux/protocols.md) 
 
