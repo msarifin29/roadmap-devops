@@ -103,6 +103,23 @@ systemctl reboot
 systemctl suspend
 ```
 
+Below is the list of some useful systemd utilities along with a brief description of what they do:
+
+- `systemctl`: It Controls the systemd system and services.
+- `journalctl`: Used To manage journal, systemd’s own logging system
+- `hostnamectl`: Can Control hostname.
+- `localectl`: Helps Configure system local and keyboard layout.
+- `timedatectl`: Used to Set time and date.
+- `systemd-cgls` : It Shows cgroup contents.
+- `systemadm`: It is a Front-end for systemctl command.
+
+| comaand-line | description |
+| `systemctl list-units --type service --all` | see all available services |
+| `systemctl start [service-name]` | start a service |
+| `systemctl stop [service-name]` | stop a service |
+| `systemctl restart [service-name]` | restart a service |
+
 ### 10. Integration with Other Tools
 
 - **Compatibility**: `systemd` is designed to be compatible with existing tools and scripts. It can run traditional init scripts and integrates with other system components like udev for device management.
+
