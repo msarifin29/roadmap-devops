@@ -29,7 +29,7 @@ The OSI model is a 7-layer conceptual framework that standardizes the functions 
    - Manages direct communication between devices on the same network.
    - Handles MAC addressing and error detection.
    - Protocols: Ethernet, PPP.
-7.**hysical Layer (Layer 1):**
+7. **hysical Layer (Layer 1):**
    - Deals with the physical connection between devices.
    - Transmits raw bits over a physical medium (e.g., cables, radio waves).
    - Example: Ethernet cables, Wi-Fi.

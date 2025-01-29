@@ -4,6 +4,7 @@ Roadmap by [Devopscube](https://www.devopscube.com/)
 ## Learn Linux
 
 - [x] [Processes in Linux/Unix](https://www.geeksforgeeks.org/processes-in-linuxunix/) 
+- [x] [List of common Linux commands](learn-linux/command-line-linux.md) 
 - [x] [How systemd work](learn-linux/systemd-works.md) 
 - [x] [File Systems in Operating System](https://www.geeksforgeeks.org/file-systems-in-operating-system/) 
 - [x] [Volume in linux](learn-linux/volume-in-linux.md) 
@@ -13,12 +14,11 @@ Roadmap by [Devopscube](https://www.devopscube.com/)
 - [x] [Configure web servers](learn-linux/nginx.md) 
 
 ## Learn How Infrastructure Components Work
+| Networking |  |
+|    :---:   | :---: |
+| [What is the Internet?](https://www.geeksforgeeks.org/types-of-internet-connection/) |  |
+| [What is Computer Networking?](https://www.geeksforgeeks.org/what-is-computer-networking/?ref=next_article) |  |
+| [What is IP Addressing?](https://www.geeksforgeeks.org/what-is-an-ip-address/) |  |
+| [Internet Protocol version v4  (IP4)](https://www.geeksforgeeks.org/what-is-ipv4/) |  |
+| [Internet Protocol version v6  (IP6)](https://www.geeksforgeeks.org/what-is-ipv6/) |  |
 
-### 1. Networking
-
-- [x] [OSI Model/TCP-IP Model](infrastructure-component/osi-model.md) 
-- [x] [Networking topologies](infrastructure-component/networking-topologies.md) 
-- [x] [CIDR Notations](infrastructure-component/cidr-notations.md) 
-- [x] [Subnetting](infrastructure-component/subnetting.md) 
-- [x] [Public and Private Network](infrastructure-component/public-network-and-private-network.md) 
-- [x] [Static/Dynamic IPS](infrastructure-component/static-or-dynamic-ips.md) 

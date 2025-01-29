@@ -1,7 +1,3 @@
-## [What is the Internet?](https://www.geeksforgeeks.org/types-of-internet-connection/)
-## [What is Computer Networking?](https://www.geeksforgeeks.org/what-is-computer-networking/?ref=next_article)
-## [What is IP Addressing?](https://www.geeksforgeeks.org/what-is-an-ip-address/)
-
 
 ## Internet Protocols
 
