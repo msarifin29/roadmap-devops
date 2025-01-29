@@ -1,134 +1,46 @@
-Overview of important protocols used in networking and web communication
+## [What is the Internet?](https://www.geeksforgeeks.org/types-of-internet-connection/)
+## [What is Computer Networking?](https://www.geeksforgeeks.org/what-is-computer-networking/?ref=next_article)
+## [What is IP Addressing?](https://www.geeksforgeeks.org/what-is-an-ip-address/)
 
-### 1. SSL (Secure Sockets Layer) and TLS (Transport Layer Security)
-- **Purpose**: SSL and TLS are cryptographic protocols designed to provide secure communication over a computer network, typically the internet.
-- **How They Work**:
-     - **Handshake**: When a client (e.g., a browser) connects to a server, they perform a handshake to establish encryption parameters.
-     - **Encryption**: Data exchanged between the client and server is encrypted using symmetric encryption (e.g., AES) after the handshake.
-     - **Authentication**: The server (and optionally the client) is authenticated using digital certificates issued by a Certificate Authority (CA).
 
-- **Difference**:
-     - SSL is the older protocol (SSL 3.0 was the last version) and is now considered insecure.
-     - TLS is the modern, secure replacement (TLS 1.2 and TLS 1.3 are widely used).
-- **Use Cases**: HTTPS (secure web browsing), email encryption (SMTP, IMAP, POP3), VPNs, and more.
+## Internet Protocols
 
-### 2. TCP (Transmission Control Protocol)
+**Internet protocols** are a set of rules that allow computers and other devices to communicate over the Internet. These protocols ensure that data is sent, received, and understood correctly between different systems. There are many types of internet protocols, each serving a specific purpose, such as transferring files, sending emails, or securing data. Understanding these protocols is important for making the internet work efficiently and securely. In this article we will see different types of internet protocol in detail.
 
-- **Purpose**: TCP is a connection-oriented protocol that ensures reliable, ordered, and error-checked delivery of data between applications.
+As we discuss Internet Protocol (IP) is a set of rules that allows devices to communicate with each other over the Internet. It is like the address system used for sending data. Every device connected to the internet has a unique IP address that helps data know where to go and where it is coming from.
 
-- **How It Works**:
-  - **Connection Establishment**: Uses a three-way handshake (SYN, SYN-ACK, ACK) to establish a connection.
-  - **Data Transfer**: Data is sent in segments, and the receiver acknowledges receipt of each segment.
-  - **Error Recovery**: Lost or corrupted packets are retransmitted.
-  - **Flow Control**: Prevents overwhelming the receiver by adjusting the rate of data transmission.
+## IP Address
 
-- **Use Cases**: Web browsing (HTTP/HTTPS), email (SMTP, IMAP), file transfer (FTP), and other applications requiring reliable communication.
+An **IP Address** represents an Internet Protocol address. A unique address that identifies the device over the network. It is almost like a set of rules governing the structure of data sent over the Internet or through a local network. An IP address helps the Internet to distinguish between different routers, computers, and websites. It serves as a specific machine identifier in a specific network and helps to improve visual communication between source and destination.
+### Working of Internet Protocol
 
-### 3. UDP (User Datagram Protocol)
+Step by step working of internet protocol:
 
-- **Purpose**: UDP is a connectionless protocol that provides fast, low-overhead communication without guaranteeing reliability or order.
+- **Dividing Data into Packets**: When you send information over the internet, IP split it into small parts called packets. Each packet contains a piece of the data and the address of where it needs to go.
+- **Addressing**: Every device connected to the internet has its own IP address. This address helps identify where the data is being sent from and where it should be delivered.
+- **Routing the Packets**: As the packets travel across the internet, they pass through several devices called routers. These routers help direct the packets toward the correct destination, like how mail is sorted at different post offices.
+- **Reassemble the Data**: Once all the packets arrive at the destination, they are put back together to recreate the original message or file.
+- **Handling Missing Packets**: If some packets don’t arrive, the system can request that they be sent again, making sure the complete data is received.
 
-- **How It Works**:
-  - **No Handshake**: Data is sent in datagrams without establishing a connection.
+This process helps data move efficiently across the internet, no matter how far it needs to travel or how many networks it passes through.
+### Need for Internet Protocols
 
-  - **No Guarantees**: No acknowledgment, retransmission, or ordering of packets.
+The sender and receiver of data are parts of different networks, located in different parts of the world having different data transfer rates. So, we need protocols to manage the flow control of data and access control of the link being shared in the communication channel. Suppose there is a sender X who has a data transmission rate of 10 Mbps. And, there is a receiver Y who has a data receiving rate of 5Mbps. Since the rate of receiving the data is slow so some data will be lost during transmission. In order to avoid this, receiver Y needs to inform sender X about the speed mismatch so that sender X can adjust its transmission rate. Similarly, the access control decides the node which will access the link shared in the communication channel at a particular instant in time. If not the transmitted data will collide if many computers send data simultaneously through the same link resulting in the corruption or loss of data.
+## Types of Internet Protocol
 
-   - **Low Latency**: Ideal for real-time applications where speed is more important than reliability.
-
-- **Use Cases**: Video streaming, VoIP (Voice over IP), online gaming, DNS queries, and IoT applications.
-
-### 4. FTP (File Transfer Protocol)
-
-- **Purpose**: FTP is a protocol for transferring files between a client and a server over a network.
-
-- **How It Works**:
-
-  - **Two Channels**: Uses two separate channels—a control channel (port 21) for commands and a data channel for file transfers.
-
-  - **Authentication**: Requires a username and password (or anonymous access).
-
-  - **Modes**: Supports active and passive modes for data transfer.
-
-- **Limitations**: Transmits data in plaintext, making it insecure.
-
-- **Use Cases**: Uploading and downloading files to/from a server.
-
-### 5. SFTP (SSH File Transfer Protocol)
-
-- **Purpose**: SFTP is a secure file transfer protocol that uses SSH for encryption and authentication.
-
-- **How It Works**:
-
-    - **Encryption**: All data (commands and files) is encrypted using SSH.
-
-    - **Single Port**: Uses a single port (usually port 22) for both control and data transfer.
-
-    - **Authentication**: Supports password-based and key-based authentication.
-
-- **Advantages**: Secure, reliable, and supports additional file operations (e.g., listing directories, deleting files).
-
-- **Use Cases**: Secure file transfers, especially in environments where data security is critical.
-
-### 6. SCP (Secure Copy Protocol)
-
-- **Purpose**: SCP is a protocol for securely transferring files between a local host and a remote host or between two remote hosts.
-
-- **How It Works**:
-
-    - **Based on SSH**: Uses SSH for encryption and authentication.
-
-    - **Simple Command**: Files are transferred using a single command (e.g., scp file.txt user@remote:/path).
-
-- **Limitations**: Less feature-rich compared to SFTP (e.g., no directory listing or file management).
-
-- **Use Cases**: Quick and secure file transfers between systems.
-
-### 7. SSH (Secure Shell)
-
-- **Purpose**: SSH is a protocol for securely accessing and managing remote systems over an unsecured network.
-
-- **How It Works**:
-
-    - **Encryption**: All communication (commands, file transfers, etc.) is encrypted using symmetric and asymmetric cryptography.
-
-    - **Authentication**: Supports password-based and key-based authentication (public/private key pairs).
-
-    - **Port**: Typically uses port 22.
-
-- **Features**:
-
-    - Remote command execution.
-
-    - Port forwarding (tunneling).
-
-    - Secure file transfer (via SFTP or SCP).
-
-- **Use Cases**: Remote server administration, secure file transfers, tunneling, and automation.
-
-### Comparison of Protocols
-
-| **Protocol** | **Purpose** | **Security** | **Reliability** | **Speed** | **Use cases** |
-| --- | --- | --- | --- | --- | --- |
-| SSL/TLS | Secure communication | High | High | Medium | HTTPS, email encryption, VPNs |
-| TCP | Reliable data transfer | None | High | Medium | Web browsing, email, file transfer |
-| UDP | Fast, low-latency communication | None | Low | Medium | Streaming, gaming, VoIP, DNS |
-| FTP | File transfer | High | High | Medium | File uploads/downloads |
-| SFTP | Secure file transfer | High | High | Medium| Secure file transfers |
-| SCP | Secure file copy | High | High | Medium | Quick secure file transfers |
-| SSH | Secure remote access | High | High | Medium | Remote administration, tunneling |
-
-**Key Takeaways**
-
-- **SSL/TLS**: Essential for securing communication over the internet.
-
-- **TCP**: Reliable and connection-oriented, used for applications requiring guaranteed delivery.
-
-- **UDP**: Fast and lightweight, used for real-time applications.
-
-- **FTP**: Unsecure file transfer protocol.
-
-- **SFTP/SCP**: Secure alternatives to FTP, built on SSH.
-
-- **SSH**: A versatile protocol for secure remote access and file transfers.
-
-These protocols form the backbone of modern networking and web communication, enabling secure, reliable, and efficient data exchange.
+- ### [Transmission Control Protocol(TCP)/Internet Protocol(IP) Model](https://www.geeksforgeeks.org/tcp-ip-model/)
+- ### [Simple Mail Transfer Protocol (SMTP)](https://www.geeksforgeeks.org/simple-mail-transfer-protocol-smtp/)
+- ### [Point-to-Point Protocol (PPP) Frame Format](https://www.geeksforgeeks.org/point-to-point-protocol-ppp-frame-format/)
+- ### [File Transfer Protocol (FTP)](https://www.geeksforgeeks.org/file-transfer-protocol-ftp-in-application-layer/)
+- ### [(Secure File Transfer Protocol) SFTP](https://www.geeksforgeeks.org/sftp-file-transfer-protocol/)
+- ### [Hypertext Transfer Protocol (HTTP)](https://www.geeksforgeeks.org/http-full-form/)
+- ### [HyperText Transfer Protocol Secure (HTTPS)](https://www.geeksforgeeks.org/explain-working-of-https/)
+- ### [Teletype Network (TELNET)](https://www.geeksforgeeks.org/introduction-to-telnet/)
+- ### [Point of Presence or Post Office Protocol (POP)](https://www.geeksforgeeks.org/pop-full-form/)
+- ### [Internet Protocol version v4  (IP4)](https://www.geeksforgeeks.org/what-is-ipv4/)
+- ### [Internet Protocol version v6  (IP6)](https://www.geeksforgeeks.org/what-is-ipv6/)
+- ### [Internet Control Message Protocol (ICMP)](https://www.geeksforgeeks.org/internet-control-message-protocol-icmp/)
+- ### [User Datagram Protocol (UDP)](https://www.geeksforgeeks.org/user-datagram-protocol-udp/)
+- ### [Internet Message Access Protocol (IMAP)](https://www.geeksforgeeks.org/internet-message-access-protocol-imap/)
+- ### [Secure Shell (SSH)](https://www.geeksforgeeks.org/introduction-to-ssh-secure-shell-keys/)
+- ### [Gopher](https://www.geeksforgeeks.org/what-is-gopher-in-computer/)
