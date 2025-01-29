@@ -7,7 +7,12 @@ Roadmap by [Devopscube](https://www.devopscube.com/)
 - [x] [Vagrant](learn-linux/vagrant.md) 
 - [x] [Configure web servers](learn-linux/nginx.md) 
 - [x] [How systemd work](learn-linux/systemd-works.md) 
-- [x] [Protocols](learn-linux/protocols.md) 
+- [x] [Processes in Linux/Unix](https://www.geeksforgeeks.org/processes-in-linuxunix/) 
+- [x] [SSH](https://devopscube.com/generate-ssh-key-pair/) 
+- [x] [File Systems in Operating System](https://www.geeksforgeeks.org/file-systems-in-operating-system/) 
+- [x] [Volume in linux]() 
+- [x] [Types of Internet Protocols](https://www.geeksforgeeks.org/types-of-internet-protocols/) 
+- [x] []() 
 
 ## Learn How Infrastructure Components Work
 
