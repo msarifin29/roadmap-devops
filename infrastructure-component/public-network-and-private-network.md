@@ -1,7 +1,7 @@
-## [Public Networks]()
+## Public Networks
 A **public network** is a network that is accessible to anyone, typically over the internet. It is open to the general public and is not restricted to a specific group of users.
 
-### [Key Characteristics:]()
+### Key Characteristics:
 
 - **Accessibility:** Anyone can connect to a public network.
 - **Security:** Less secure because it is open to the public.
@@ -11,20 +11,20 @@ A **public network** is a network that is accessible to anyone, typically over t
   - Public Wi-Fi hotspots (e.g., in cafes, airports, or libraries).
   - Websites and online services (e.g., Google, Facebook).
 
-### [Advantages:]()
+### Advantages:
 
 - Easy to access and use.
 - No need for special configurations to connect.
 
-### [Disadvantages:]()
+### Disadvantages:
 
 - Vulnerable to attacks (e.g., hacking, malware).
 - Limited control over who can access the network.
 
-## [Private Networks]()
+## Private Networks
 A **private network** is a network that is restricted to a specific group of users, such as a home, office, or organization. It is not accessible to the general public.
 
-### [Key Characteristics:]()
+### Key Characteristics:
 - **Accessibility:** Restricted to authorized users.
 - **Security:** More secure because access is controlled.
 - **IP Addresses:** Uses private IP addresses, which are not routable on the internet. These addresses are reserved for internal use and must be translated to public IP addresses to access the internet (using NAT).
@@ -34,17 +34,17 @@ A **private network** is a network that is restricted to a specific group of use
   - Corporate intranets.
   - School or university networks.
 
-### [Advantages:]()
+### Advantages:
 - Enhanced security and privacy.
 - Greater control over who can access the network.
 - Efficient use of IP addresses (private IP ranges can be reused in different networks).
 
-### [Disadvantages:]()
+### Disadvantages:
 
 - Requires configuration and management.
 - Limited accessibility from outside the network.
 
-## [Private IP Address Ranges]()
+## Private IP Address Ranges
 
 Private networks use specific IP address ranges reserved by the Internet Assigned Numbers Authority (IANA). These ranges are:
 
@@ -54,7 +54,7 @@ Private networks use specific IP address ranges reserved by the Internet Assigne
 
 These addresses are not routable on the internet, meaning devices with private IP addresses cannot directly communicate with the internet without **Network Address Translation (NAT).**
 
-## [Network Address Translation (NAT)]()
+## Network Address Translation (NAT)
 
 NAT is a technique used to allow devices with private IP addresses to access the internet. It translates private IP addresses into a public IP address when traffic leaves the private network.
 
@@ -69,7 +69,7 @@ NAT is a technique used to allow devices with private IP addresses to access the
 - **Dynamic NAT**: Maps private IP addresses to a pool of public IP addresses.
 - **PAT (Port Address Translation)**: Maps multiple private IP addresses to a single public IP address using different ports.
 
-## [Public vs. Private Networks: Key Differences]()
+## Public vs. Private Networks: Key Differences
 
 | **Feature** | **Public Network** | **Private Network** |
 | --- | --- | --- |
@@ -79,7 +79,7 @@ NAT is a technique used to allow devices with private IP addresses to access the
 | Routability | Globally routable on the internet | Not routable on the internet |
 | Examples | Internet, public Wi-Fi | Home networks, corporate intranets |
 
-## [Use Cases]()
+## Use Cases
 
 **Public Networks:**
 
@@ -93,7 +93,7 @@ NAT is a technique used to allow devices with private IP addresses to access the
 - Securing sensitive data within an organization.
 - Enabling internal communication (e.g., file sharing, printing).
 
-## [Combining Public and Private Networks]()
+## Combining Public and Private Networks
 
 In many setups, private networks are connected to the internet (a public network) via a router. The router uses NAT to allow devices on the private network to access the internet while keeping the private network secure.
 
@@ -103,7 +103,7 @@ In many setups, private networks are connected to the internet (a public network
 - The router has a public IP address provided by the ISP.
 - Devices on the home network access the internet through the router, which performs NAT.
 
-## [Security Considerations]()
+## Security Considerations
 
 **Public Networks:**
 

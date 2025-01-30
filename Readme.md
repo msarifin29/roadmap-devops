@@ -21,4 +21,10 @@ Roadmap by [Devopscube](https://www.devopscube.com/)
 | [What is IP Addressing?](https://www.geeksforgeeks.org/what-is-an-ip-address/) |  |
 | [Internet Protocol version v4  (IP4)](https://www.geeksforgeeks.org/what-is-ipv4/) |  |
 | [Internet Protocol version v6  (IP6)](https://www.geeksforgeeks.org/what-is-ipv6/) |  |
+| [OSI (Open Systems Interconnection) Model](infrastructure-component/osi-model.md) |  |
+| [Tranmission Controll Protocol (TCP)/Internet Protocol (IP)](infrastructure-component/tcp-model.md) |  |
+| [Networking Topologies](infrastructure-component/networking-topologies.md) |  |
+| [CIDR (Classless Inter-Domain Routing)](infrastructure-component/cidr-notations.md) |  |
+| [Subnetting](infrastructure-component/subnetting.md) |  |
+| [Public network & Private network](infrastructure-component/public-network-and-private-network.md) |  |
 

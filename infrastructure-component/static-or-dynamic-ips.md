@@ -1,6 +1,6 @@
 **Static IP addresses** and **dynamic IP addresses** are two methods of assigning IP addresses to devices on a network. Each has its own advantages, disadvantages, and use cases. Let’s explore them in detail:
 
-## [Static IP Addresses]()
+## Static IP Addresses
 
 A **static IP address** is a fixed IP address that is manually assigned to a device and does not change over time.
 
@@ -23,7 +23,7 @@ A **static IP address** is a fixed IP address that is manually assigned to a dev
 - **Scalability**: Not ideal for large networks with many devices.
 - **Security**: Static IPs are easier to target in attacks.
 
-## [Dynamic IP Addresses]()
+## Dynamic IP Addresses
 
 A **dynamic IP address** is an IP address that is automatically assigned to a device by a **DHCP (Dynamic Host Configuration Protocol)** server and can change over time.
 
@@ -47,7 +47,7 @@ A **dynamic IP address** is an IP address that is automatically assigned to a de
 - **Accessibility**: Harder to locate devices on the network.
 - **Dependency**: Relies on a DHCP server; if the server fails, devices may not get an IP address.
 
-## [How DHCP Works]()
+## How DHCP Works
 
 DHCP is the protocol used to assign dynamic IP addresses. Here’s how it works:
 - **Discovery**: A device sends a broadcast message to find a DHCP server.
@@ -55,7 +55,7 @@ DHCP is the protocol used to assign dynamic IP addresses. Here’s how it works:
 - **Request**: The device requests the offered IP address.
 - **Acknowledgment**: The DHCP server confirms the assignment and provides additional information (e.g., subnet mask, gateway, DNS servers).
 
-## [Static vs. Dynamic IP Addresses: Key Differences]()
+## Static vs. Dynamic IP Addresses: Key Differences
 
 | **Feature** | **Static IP Address** | **Dynamic IP Address** |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ DHCP is the protocol used to assign dynamic IP addresses. Here’s how it works:
 | Scalability | Less scalable | Highly scalable |
 | Reliability | More reliable for specific devices | Less predictable |
 
-## [ When to Use Static vs. Dynamic IPs]()
+## When to Use Static vs. Dynamic IPs
 
 **Use Static IP Addresses When**:
 - You need a device to always have the same IP address (e.g., servers, printers).
@@ -89,7 +89,7 @@ In many networks, a combination of static and dynamic IP addresses is used:
 - A company’s web server and printer have static IPs.
 - Employees’ laptops and smartphones receive dynamic IPs from a DHCP server.
 
-## [Security Considerations]()
+## Security Considerations
 
 - **Static IPs**:
   - Easier to target in attacks, so ensure proper firewall and security measures.
@@ -98,7 +98,7 @@ In many networks, a combination of static and dynamic IP addresses is used:
   - Less predictable, making it harder for attackers to target specific devices.
   - Ensure the DHCP server is secure to prevent unauthorized IP assignments.
 
-## [How to Configure Static and Dynamic IPs]()
+## How to Configure Static and Dynamic IPs
 
 **Configuring a Static IP Address**:
 - Access the device’s network settings.
@@ -109,7 +109,7 @@ In many networks, a combination of static and dynamic IP addresses is used:
 - Ensure a DHCP server is running on the network.
 - Set the device to obtain an IP address automatically (default setting for most devices).
 
-## [Real-World Examples]()
+## Real-World Examples
 
 **Static IP**:
 - A web server hosting a website needs a static IP so users can always access it.

@@ -4,7 +4,7 @@ Networking topologies refer to the arrangement or layout of various elements (li
 - **Physical Topology:** Refers to the physical layout of devices and cables in a network.
 - **Logical Topology:** Refers to how data flows within the network, regardless of its physical design.
 # 2. Common Network Topologies
-a. **Bus Topology**
+[**a. Bus Topology**](https://www.geeksforgeeks.org/advantages-and-disadvantages-of-bus-topology/)
    - **Description:** All devices are connected to a single central cable (the bus or backbone).
    - **How it works:** Data is transmitted along the bus, and all devices receive the data, but only the intended recipient processes it.
    - **Advantages:**
@@ -15,7 +15,7 @@ a. **Bus Topology**
       - Performance degrades as more devices are added.
       - Difficult to troubleshoot.
 
-b. **Star Topology**
+[**b. Star Topology**](https://www.geeksforgeeks.org/advantages-and-disadvantages-of-star-topology/)
    -  **Description:** All devices are connected to a central hub or switch.
    -  **How it works:** Data passes through the hub/switch to reach the destination device.
    -  **Advantages:**
@@ -26,7 +26,7 @@ b. **Star Topology**
       -  If the central hub fails, the entire network goes down.
       -  Requires more cabling than bus topology.
       
-c. **Ring Topology**
+[**c. Ring Topology**](https://www.geeksforgeeks.org/advantages-and-disadvantages-of-ring-topology/)
 -  **Description:** Devices are connected in a circular fashion, where each device is connected to two other devices, forming a ring.
 -  **How it works:** Data travels in one direction (unidirectional) or both directions (bidirectional) around the ring.
 -  **Advantages**:
@@ -36,7 +36,7 @@ c. **Ring Topology**
     - A failure in any cable or device can disrupt the entire network.
     - Adding or removing devices can be difficult.
 
-d. **Mesh Topology**
+[**d. Mesh Topology**](https://www.geeksforgeeks.org/advantage-and-disadvantage-of-mesh-topology/)
 - **Description:** Every device is connected to every other device in the network.
 - **How it works:** Data can take multiple paths to reach its destination.
 - **Types:**
@@ -49,7 +49,7 @@ d. **Mesh Topology**
     - Expensive due to high cabling and maintenance requirements.
     - Complex to set up and manage.
 
-e. **Tree Topology**
+[**e. Tree Topology**](https://www.geeksforgeeks.org/advantages-and-disadvantages-of-tree-topology/)
 -   **Description:** A hybrid topology that combines characteristics of star and bus topologies. Devices are arranged in a hierarchical structure.
 -   **How it works:** Devices are grouped into star-configured clusters connected to a central backbone (bus).
 - **Advantages:**
@@ -59,7 +59,7 @@ e. **Tree Topology**
   -  If the backbone fails, the entire network is affected.
   -  More complex than star or bus topologies.
 
-f. **Hybrid Topology**
+[**f. Hybrid Topology**](https://www.geeksforgeeks.org/what-is-hybrid-topology/)
 - **Description:** Combines two or more different topologies.
 - **How it works:** For example, a star-bus or star-ring hybrid.
 - **Advantages:**
@@ -69,7 +69,7 @@ f. **Hybrid Topology**
    - Complex to design and implement.
    - Can be expensive.
 
-g. **Point-to-Point Topology**
+[**g. Point-to-Point Topology**](https://www.geeksforgeeks.org/difference-between-point-to-point-link-and-star-topology-network/)
 - **Description:** A direct connection between two devices.
 - **How it works:** Data travels directly between the two devices.
 - **Advantages:**
@@ -79,7 +79,7 @@ g. **Point-to-Point Topology**
   -  Limited to two devices.
   -  Not scalable.
 
-h. Point-to-Multipoint Topology
+**h. Point-to-Multipoint Topology**
 - **Description:** A central device communicates with multiple devices.
 - **How it works:** The central device acts as a hub, and all other devices connect to it.
 - **Advantages:**

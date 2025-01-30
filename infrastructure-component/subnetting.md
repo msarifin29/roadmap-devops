@@ -1,16 +1,16 @@
-**Subnetting** is a fundamental concept in networking that involves dividing a larger IP network into smaller, more manageable subnetworks (or subnets). This process improves network efficiency, enhances security, and reduces congestion. Let’s break it down step by step:
+**Subnetting** is a fundamental concept in networking that involves dividing a larger IP network into smaller, more manageable subnetworks (or subnets). This process improves network efficiency, enhances security, and reduces congestion.
 
-### [1. What is Subnetting?]()
+### 1. What is Subnetting?
 - Subnetting allows you to split a single IP network into multiple smaller networks.
 - It is done by borrowing bits from the **host portion** of an IP address to create a **subnet mask**, which defines the boundaries of each subnet.
 
-### [2. Why Use Subnetting?]()
+### 2. Why Use Subnetting?
 - **Efficient IP Address Allocation:** Prevents wastage of IP addresses by allocating only the required number of addresses to each subnet.
 - **Improved Network Performance:** Reduces network congestion by limiting broadcast traffic to smaller subnets.
 - **Enhanced Security:** Isolates network segments, making it harder for attackers to move laterally.
 - **Simplified Management:** Makes it easier to organize and troubleshoot networks.
 
-### [3. Key Concepts in Subnetting]()
+### 3. Key Concepts in Subnetting
 a. **IP Address and Subnet Mask**
 - An I**P address** (IPv4) is a 32-bit number divided into two parts:
   - **Network Portion:** Identifies the network.
@@ -30,7 +30,7 @@ c. **Network and Host Bits**
   - Host bits: 8 (32 - 24 = 8)
   - Number of hosts per subnet: $2^8−2=254$ (subtracting the network and broadcast addresses).
 
-### [4. Steps to Subnet a Network]()
+### 4. Steps to Subnet a Network
 
 **Step 1: Determine the Requirements**
 - How many subnets are needed?
@@ -51,7 +51,7 @@ c. **Network and Host Bits**
 **Step 4: Assign Subnets**
 - Assign each subnet to a specific network segment (e.g., different departments or floors in a building).
 
-### [5. Subnetting Example]()
+### 5. Subnetting Example
 
 **Scenario:**
 - You have the IP network `192.168.1.0/24`.
@@ -73,7 +73,7 @@ c. **Network and Host Bits**
   - Subnet 3: `192.168.1.128/26` (Hosts: `192.168.1.129` to `192.168.1.190`)
   - Subnet 4: `192.168.1.192/26` (Hosts: `192.168.1.193` to `192.168.1.254`)
 
-### [6. Subnetting Cheat Sheet]()
+### 6. Subnetting Cheat Sheet
 | **Subnet Mask (CIDR)** | **Subnet Mask (Decimal)** | **Number of Subnets** | **Number of Hosts per Subnet** |
 | --- | --- | --- | --- |
 | /24 | 255.255.255.0 | 1 | 254 |
@@ -84,12 +84,12 @@ c. **Network and Host Bits**
 | /29 | 255.255.255.248 | 32 | 6 |
 | /30 | 255.255.255.252 | 64 | 2 |
 
-### [7. Tools for Subnetting]()
+### 7. Tools for Subnetting
 
 - **Subnet Calculators:** Online tools that automate subnetting calculations.
 - **Binary Conversion:** Understanding binary is key to mastering subnetting.
 
-### [8. Common Mistakes to Avoid]()
+### 8. Common Mistakes to Avoid
 
 - Forgetting to subtract 2 for the network and broadcast addresses.
 - Misaligning subnet boundaries.

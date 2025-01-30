@@ -1,6 +1,6 @@
-**CIDR (Classless Inter-Domain Routing)** is a method of representing IP addresses and their associated subnet masks in a compact and flexible format. It is widely used in modern networking to allocate IP addresses efficiently and enable routing.
+**[CIDR (Classless Inter-Domain Routing)](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)** is a method of representing IP addresses and their associated subnet masks in a compact and flexible format. It is widely used in modern networking to allocate IP addresses efficiently and enable routing.
 
-# [Structure of CIDR Notation]()
+## Structure of CIDR Notation
 
 CIDR notation combines:
 
@@ -13,7 +13,7 @@ Example:
   - Subnet Mask: 255.255.255.0 (24 bits for the network).
   - Hosts: 256 total IPs (254 usable).
 
-# [Subnet Masks and Prefix Length]()
+## Subnet Masks and Prefix Length
 
 The subnet mask is a 32-bit number that divides the IP address into:
 
@@ -29,7 +29,7 @@ The subnet mask is a 32-bit number that divides the IP address into:
 | /24 | 255.255.255.0 | 256 | 254 |
 | /30 | 255.255.255.252 | 4 | 2 |
 
-# [Calculating Subnets and Hosts]()
+## Calculating Subnets and Hosts
 
 1. Number of Hosts per Subnet
 The number of hosts is calculated as:
@@ -52,7 +52,7 @@ For example:
   - New mask = `/26` (255.255.255.192).
   - Number of subnets = 22=4
 
-# [CIDR Aggregation]()
+## CIDR Aggregation
 
 CIDR allows grouping multiple IP ranges into a single routing entry, known as **route aggregation** or **supernetting**.
 
@@ -61,7 +61,7 @@ Example:
 - Combine `192.168.0.0/24` and `192.168.1.0/24` into a single block:
 - Aggregated block: `192.168.0.0/23` (spans 512 IPs).
 
-# [CIDR in Action]()
+## CIDR in Action
 
 Instead of using fixed classful IP ranges (Class A, B, C), CIDR enables custom subnet sizes to reduce waste.\
 Example:
@@ -73,7 +73,7 @@ CIDR helps ISPs advertise a single route for multiple IP ranges.\
 Example:
    - Advertise `172.16.0.0/12` instead of multiple smaller blocks like `/16`.
 
-# [CIDR Example Walkthrough]()
+## CIDR Example Walkthrough
 
 1. **IP Address:** 192.168.1.128/25.
 2. **Subnet Mask:**
@@ -86,11 +86,11 @@ Example:
    - Host Bits = $32−25=7$.
    - Total Hosts = $2^7 −2=126$.
 
-# [IPv6 and CIDR]()
+## IPv6 and CIDR
 
 CIDR is also used in IPv6, where the address space is much larger (128 bits).
 
 - Example: `2001:db8::/48`.
   - Network portion: First 48 bits.
   - Host portion: Remaining 80 bits.
-IPv6 simplifies subnetting because each subnet typically gets a **/64** allocation (16 bits for subnets, 64 bits for devices).
+IPv6 simplifies subnetting because each subnet typically gets a `/64` allocation (16 bits for subnets, 64 bits for devices).
