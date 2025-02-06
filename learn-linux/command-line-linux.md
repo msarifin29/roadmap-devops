@@ -97,6 +97,7 @@ mkdir dirname        # Creates a directory
 mkdir -p dir1/dir2   # Creates nested directories (parent directories if they don't exist)
 
 rmdir dirname  # Deletes an empty directory
+rmdir dir*  # Deletes all directories with name 'dir'
 
 rm filename        # Deletes a file
 rm -r dirname      # Recursively deletes a directory and its contents
@@ -198,6 +199,10 @@ grep -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' log.txt
 
 # Find large files modified in last 24 hours
 find / -type f -size +100M -mtime -1
+ls g???? # List files with names starting with g and containing five letters
+ls mk* # List files whose names begin with mk and end with any characters.
+ls g[a-n]??? # List files having five letter names starting with g and second character between a-n.
+ls g[!a-m]??? # List five letter names starting with g and not having the second character between a-m.
 ```
 
 ### 6. Process Management
