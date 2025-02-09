@@ -119,7 +119,7 @@ ln target linkname     # Creates a hard link
 more filename  # Displays file content one page at a time
 less filename  # Allows scrolling up and down (more advanced than `more`)
 
-chmod 755 filename  # Sets permissions to rwxr-xr-x
+chmod 755 filename  # Sets permissions to rwxr-xr-x (r = read) (w = write) (x = execute)
 chmod +x filename   # Makes the file executable
 chmod -R 755 dir    # Recursively changes permissions for a directory
 
@@ -154,10 +154,9 @@ vim file.txt
 # :q - Quit
 # :wq - Save and quit
 
-cat filename        # Displays file content
-cat file1 file2     # Concatenates and displays multiple files
-cat > filename      # Creates a new file and writes input to it (Ctrl+D to save)
-cat file1 >> file2  # Appends file1 content to file2
+echo string > newfile # The specified string is placed in a new file
+echo string >> existingfile # The specified string is appended to the end of an already existing file
+echo $variable # The contents of the specified environment variable are displayed
 
 head filename       # Displays the first 10 lines
 head -n 20 filename # Displays the first 20 lines
@@ -165,6 +164,25 @@ head -n 20 filename # Displays the first 20 lines
 tail filename       # Displays the last 10 lines
 tail -n 20 filename # Displays the last 20 lines
 tail -f filename    # Follows the file in real-time (useful for logs)
+
+# Viewing Compressed Files
+zcat compressed-file.txt.gz # To view a compressed file
+zless somefile.gz # To page through a compressed file
+zmore somefile.gz # To page through a compressed file
+zgrep -i less somefile.gz # To search inside a compressed file
+zdiff file1.txt.gz file2.txt.gz # 	To compare two compressed files
+
+cat filename        # Displays file content
+cat file1 file2     # Concatenates and displays multiple files
+cat > filename      # Creates a new file and writes input to it (Ctrl+D to save)
+cat file1 >> file2  # Appends file1 content to file2
+cat file1 file2	# Concatenate multiple files and display the output; i.e. the entire content of the first file is followed by that of the second file
+cat file1 file2 > newfile # 	Combine multiple files and save the output into a new file
+cat file >> existingfile # Append a file to the end of an existing file
+cat > file  # Any subsequent lines typed will go into the file, until CTRL-D is typed
+cat >> file # Any subsequent lines are appended to the file, until CTRL-D is typed
+cat << EOF > myfile # The string used to show the beginning and end of the process need not be EOF. It could be STOP or any other string not used in the content itself
+
 ```
 
 ### 5. File Searching
@@ -316,6 +334,11 @@ passwd username        # Change password
 passwd -l username     # Lock user account
 passwd -u username     # Unlock user account
 
+# Groups
+sudo /usr/sbin/groupadd groupname # add new group
+sudo /usr/sbin/groupdel groupname # remove group
+sudo /usr/sbin/usermod -a -G groupname username # Adding a user to an already existing group
+
 # User Information
 who                    # Show who is logged in
 w                      # Show who is logged in and what they're doing
@@ -331,25 +354,31 @@ sudo -i               # Get root shell
 ### 10. Text Processing
 ```bash
 # Basic Text Processing
-sort file.txt          # Sort lines alphabetically
-sort -n file.txt       # Sort numerically
-sort -r file.txt       # Sort in reverse
+sort <filename>          # Sort lines alphabetically
+sort -n <filename>       # Sort numerically
+sort -r <filename>       # Sort in reverse order
+cat file1 file2 | sort # Combine the two files, then sort the lines and display the output on the terminal
+sort -k 3 <filename> # Sort the lines by the 3rd field on each line instead of the beginning
 
-uniq file.txt          # Remove adjacent duplicate lines
-sort file.txt | uniq   # Remove all duplicates (must sort first)
+uniq <filename>          # Remove adjacent duplicate lines
+sort <filename> | uniq   # Remove all duplicates (must sort first)
+
+paste -d, file1 file2 # Combine lines from multiple files
 
 # Counting
-wc file.txt            # Count lines, words, characters
-wc -l file.txt         # Count lines only
+wc <filename>            # Count lines, words, characters
+wc -l <filename>         # Count lines only
 
 # Text Manipulation
-cut -d: -f1 file.txt   # Cut first field using : delimiter
+cut -d: -f1 <filename>   # Cut first field using : delimiter
 tr 'a-z' 'A-Z'         # Convert lowercase to uppercase
 
 # Advanced Text Processing
 sed 's/old/new/' file  # Replace first occurrence
 sed 's/old/new/g' file # Replace all occurrences
 
+# Sum numbers in a column
+awk '{sum += $1} END {print sum}' numbers.txt
 awk '{print $1}' file  # Print first column
 awk -F',' '{print $1,$3}' file # Use comma delimiter
 
@@ -359,7 +388,111 @@ cat access.log | cut -d' ' -f1 | sort | uniq -c | sort -nr
 
 # Extract emails from text file
 grep -E -o '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b' file.txt
+grep [pattern] <filename> # Search for a pattern in a file and print all matching lines
+grep -v [pattern] <filename> # 	Print all lines that do not match the pattern
+grep [0-9] <filename> # Print the lines that contain the numbers 0 through 9
+grep -C 3 [pattern] <filename> # Print context of lines (specified number of lines above and below the pattern) for matching the pattern. Here, the number of lines is specified as 3
 
-# Sum numbers in a column
-awk '{sum += $1} END {print sum}' numbers.txt
+strings book1.xls | grep my_string # TO search my_string in file book1.xls:
 ```
+
+### 11. Networking Configuration and Tools
+
+```bash
+ping google.com # Check the status of the remote host
+
+route –n or ip route # Show current routing table
+route add -net address or ip route add # Add static route
+route del -net address or ip route add # Delete static route
+
+traceroute google.com # Print the route taken by the packet to reach the network host
+
+scp <localfile> <user@remotesystem>:/home/user/ # Copy a local file to a remote system
+```
+
+### 12. The Bash Shell and Basic Scripting
+
+`bash -x <filename>` Turns on debugging
+`bash +x <filename>` Turns off debugging
+
+- `#`	Used to add a comment, except when used as \#, or as #! when starting a script
+- `\`	Used at the end of a line to indicate continuation on to the next line, or to indicate that the next character is to be interpreted literally, as in \$
+- `;`	Used to interpret what follows as a new command to be executed after completion of the current command
+- `$`	Indicates what follows is an environment variable
+- `>`	Redirect output
+- `>>`	Append output
+- `<`	Redirect input
+- `|`	Used to pipe the result into the next command
+- `$0`	Script name
+- `$1`	First parameter
+- `$2, $3, etc.`	Second, third parameter, etc.
+- `$*`	All parameters
+- `$#`	Number of arguments
+- `function_name () {}` Functions
+- The if Statement
+```
+if [ <condition> ] ; then
+    <statements>
+elif [ <condition> ] ; then
+    <statements> 
+else
+    <statements>
+fi
+```
+- `-e` file	Checks if the file exists
+- `-d` file	Checks if the file is a directory
+- `-f` file	Checks if the file is a regular file (i.e., not a symbolic link, device node, directory, etc.)
+- `-s` file	Checks if the file is of non-zero size
+- `-g` file	Checks if the file has sgid set
+- `-u` file	Checks if the file has suid set
+- `-r` file	Checks if the file is readable
+- `-w` file	Checks if the file is writable
+- `-x` file	Checks if the file is executable
+- `&&`	`AND`	The action will be performed only if both the conditions evaluate to true
+- `||`	`OR`	The action will be performed if any one of the conditions evaluate to true
+- `!`	`NOT`	The action will be performed only if the condition evaluates to false
+- `-eq`	Equal to
+- `-ne`	Not equal to
+- `-gt`	Greater than
+- `-lt`	Less than
+- `-ge`	Greater than or equal to
+- `-le`	Less than or equal t
+- `[[ string1 > string2 ]]`	Compares the sorting order of string1 and string2
+- `[[ string1 == string2 ]]`	Compares the characters in string1 with the characters in string2
+- `myLen1=${#string1}`	Saves the length of string1 in the variable myLen1
+- `${string#*.}` Extract all characters in a string after a dot (.)
+- The case statement
+  ```
+  case <expression> in
+     <pattern1>) <execute commands>;;
+     <pattern2>) <execute commands>;;
+     * )       <execute some default commands or nothing> 
+     ;;
+  esac
+  ```
+- The for loop
+  ```
+  for <variable-name> in <list>
+  do
+    <execute commands>
+  done
+  ```
+- The while loop or condition is true
+  ```
+  while [ <condition> ] 
+  do
+    <execute commands>
+  done
+  ```
+- The until loop or condition is false
+  ```
+  until [ <condition> ] 
+  do
+    <execute commands>
+  done
+  ```
+- `stdin`	Standard Input, by default the keyboard/terminal for programs run from the command line	`0`
+- `stdout`	Standard output, by default the screen for programs run from the command line	`1`
+- `stderr`	Standard error, where output error messages are shown or saved; by default, the same as stdout	`2`
+- `TEMP=$(mktemp /tmp/tempfile.XXXXXXXX)`	To create a temporary file
+- `TEMPDIR=$(mktemp -d /tmp/tempdir.XXXXXXXX)`	To create a temporary directory
