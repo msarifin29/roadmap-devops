@@ -308,7 +308,12 @@ ping -c 4 google.com    # Ping 4 times only
 # Network Configuration
 ifconfig                # Show/configure network interfaces
 ip addr                 # Modern replacement for ifconfig
+
 ip route               # Show routing table
+sudo route add -net <IP ADDRESS> # Add new route
+sudo route del -net <IP ADDRESS> # Add new route
+ip route add <IP ADDRESS> # Add new route
+ip route del <IP ADDRESS> # Add new route
 
 # Network Monitoring
 netstat -tuln          # Show active network connections
@@ -319,7 +324,22 @@ netstat -tuln          # Show active network connections
 
 # Remote Access
 ssh user@hostname       # Connect to remote host
-scp file user@host:/path # Secure copy file to remote host
+
+scp <file name> user@host:/path # To copy a file over from local host to a remote host
+scp user@host:/path/myfile.txt /local/directory # To copy a file over from remote host to a local host
+scp -r mydir user@host:/remote/directory # To copy a directory over from remote host to a local host
+
+rsync -zvr /my/local/directory/one /my/local/directory/two # Copy/sync files on the same host
+rsync /local/directory username@remotehost.com:/remote/directory # Copy/sync files to local host from a remote host
+rsync username@remotehost.com:/remote/directory /local/directory # Copy/sync files to a remote host from a local host
+
+route –n or ip route # Show current routing table
+route add -net address or ip route add # Add static route
+route del -net address or ip route add # Delete static route
+
+traceroute google.com # Print the route taken by the packet to reach the network host
+
+scp <localfile> <user@remotesystem>:/home/user/ # Copy a local file to a remote system
 ```
 
 ### 9. User Management
@@ -396,21 +416,7 @@ grep -C 3 [pattern] <filename> # Print context of lines (specified number of lin
 strings book1.xls | grep my_string # TO search my_string in file book1.xls:
 ```
 
-### 11. Networking Configuration and Tools
-
-```bash
-ping google.com # Check the status of the remote host
-
-route –n or ip route # Show current routing table
-route add -net address or ip route add # Add static route
-route del -net address or ip route add # Delete static route
-
-traceroute google.com # Print the route taken by the packet to reach the network host
-
-scp <localfile> <user@remotesystem>:/home/user/ # Copy a local file to a remote system
-```
-
-### 12. The Bash Shell and Basic Scripting
+### 11. The Bash Shell and Basic Scripting
 
 `bash -x <filename>` Turns on debugging
 `bash +x <filename>` Turns off debugging
